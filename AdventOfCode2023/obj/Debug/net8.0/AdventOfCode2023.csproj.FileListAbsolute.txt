@@ -12,3 +12,4 @@ C:\Dev\AdventOfCode2023\AdventOfCode2023\AdventOfCode2023\obj\Debug\net8.0\refin
 C:\Dev\AdventOfCode2023\AdventOfCode2023\AdventOfCode2023\obj\Debug\net8.0\AdventOfCode2023.pdb
 C:\Dev\AdventOfCode2023\AdventOfCode2023\AdventOfCode2023\obj\Debug\net8.0\AdventOfCode2023.genruntimeconfig.cache
 C:\Dev\AdventOfCode2023\AdventOfCode2023\AdventOfCode2023\obj\Debug\net8.0\ref\AdventOfCode2023.dll
+C:\Dev\AdventOfCode2023\AdventOfCode2023\AdventOfCode2023\obj\Debug\net8.0\AdventOfCode2023.sourcelink.json

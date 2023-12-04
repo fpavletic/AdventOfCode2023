@@ -8,19 +8,19 @@ internal partial class Day01 : ISolution
     {
     }
 
-    public string Part1(string input)
+    public string Part1()
 		{
             static bool IsDigit(char c) => c - '0' is >= 0 and < 10;
-            var numbers =  input.Split(Environment.NewLine)
+            var numbers =  Input.Split(Environment.NewLine)
                 .Select(line => (line.First(IsDigit)-'0') * 10 + (line.Last(IsDigit)-'0'))
                 .ToList();
                 
             return numbers.Sum().ToString();
 		}
 
-		public string Part2(string input)
+		public string Part2()
 		{
-            return input.Split(Environment.NewLine)
+            return Input.Split(Environment.NewLine)
                 .Select(line => FindFirstNumber(line) * 10 + FindFirstNumber(line.Reverse(), true))
                 .Sum().ToString();
 		}
@@ -31,7 +31,7 @@ internal partial class Day01 : ISolution
 			IEnumerable<Machine> activeMachines = new List<Machine>();
 			foreach (char c in input)
 			{
-				activeMachines = activeMachines.Where(m => m.Transition(c));
+				activeMachines = activeMachines.Where(m => m.Transition(c)).ToList();
 				if (availableMachines.TryGetValue(c, out var newMachines))
 				{
 					activeMachines = activeMachines.Concat(newMachines.Select(m => m.Clone())).ToList();
@@ -69,7 +69,7 @@ internal partial class Day01 : ISolution
 			public Machine(int number)
 			{
 				if (number is < 0 or > 9) throw new ArgumentException();
-				_token = new[] { (char)(number + '0') };
+				_token = [(char)(number + '0')];
                 Value = number;
 			}
 

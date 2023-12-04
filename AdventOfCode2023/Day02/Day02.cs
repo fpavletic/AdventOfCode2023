@@ -17,9 +17,9 @@ internal partial class Day02 : ISolution
     private static bool IsGameValid(string line) => Regex.Matches(line, CubeGroupPattern).All(match =>
         _colorToMaxCubeCount[match.Groups[2].Value] >= int.Parse(match.Groups[1].Value));
 
-    public string Part1(string input)
+    public string Part1()
     {
-        return input.Split(Environment.NewLine)
+        return Input.Split(Environment.NewLine)
             .Where(IsGameValid)
             .Select(GetGameId)
             .Sum()
@@ -33,9 +33,9 @@ internal partial class Day02 : ISolution
             .GroupBy(match => match.Groups[2].Value)
             .ToDictionary(group => group.Key, group => group.Max(match => int.Parse(match.Groups[1].Value)));
 
-    public string Part2(string input)
+    public string Part2()
     {
-        return input.Split(Environment.NewLine)
+        return Input.Split(Environment.NewLine)
             .Select(GetGamePower)
             .Sum()
             .ToString();
