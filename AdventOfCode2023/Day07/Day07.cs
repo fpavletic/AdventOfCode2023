@@ -35,7 +35,7 @@ internal partial class Day07 : ISolution
 
         var score = ScoreGroup(hand, joker);
         foreach(var symbol in hand){
-            score = score << 4; //Hex should be enough, there are only 14 cards
+            score <<= 4; //Hex should be enough, max symbol value is 14
             score |= ScoreSymbol(symbol, joker);
         }
         return score;

@@ -2,8 +2,6 @@ namespace AdventOfCode2023.Day05;
 
 internal partial class Day05 : ISolution
 {
-
-
     public string Part1()
     {
         throw new NotImplementedException();
