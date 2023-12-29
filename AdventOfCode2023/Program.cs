@@ -1,4 +1,5 @@
-﻿using AdventOfCode2023;
+﻿using System.Buffers;
+using AdventOfCode2023;
 using AdventOfCode2023.Day01;
 using AdventOfCode2023.Day02;
 using AdventOfCode2023.Day03;
@@ -10,6 +11,8 @@ using AdventOfCode2023.Day09;
 using AdventOfCode2023.Day10;
 using AdventOfCode2023.Day11;
 using AdventOfCode2023.Day12;
+using AdventOfCode2023.Day13;
+using AdventOfCode2023.Day14;
 
 var domainDirectory = AppDomain.CurrentDomain.BaseDirectory;
 var projectDirectory = Directory.GetParent(domainDirectory)?.Parent?.Parent?.Parent;
@@ -19,7 +22,7 @@ var year = DateTime.Now.Year;
 var day = string.Format("{0:D2}", DateTime.Now.Date.Day);
 
 //TODO reflexion the solution and download the input automatically
-var solution = new Day12();
+var solution = new Day14();
 Console.WriteLine(solution.Part1());
 Console.WriteLine(solution.Part2());
 
@@ -32,4 +35,5 @@ namespace AdventOfCode2023
         public string Part2();
 
     }
+
 }
